@@ -1,0 +1,72 @@
+<idea-plugin version="2">
+  <id>org.igu.plugins.consolelog</id>
+  <name>Console Log</name>
+  <version>1.0</version>
+  <vendor email="issam.guissouma@laposte.net">iguissouma</vendor>
+
+  <description><![CDATA[
+      console-log is a simple and smart helper function that makes logging and debugging easy.
+      <br>Features:<br>
+      <ul>
+          <li>Insert log message automatically by selecting var/parameter (alt l)</li>
+          <li>Delete all log messages in current file(alt 7)</li>
+          <li>Comment all log messages in current file(alt 8)</li>
+          <li>Uncomment all log messages in current file(alt 9)</li>
+      </ul>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <p>1.0:</p>
+      <ul>
+        <li>Initial release</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="172"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products -->
+  <depends>com.intellij.modules.lang</depends>
+  <!-- This enables the PSI capability for JavaScript -->
+  <depends>JavaScript</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <action id="org.igu.plugins.consolelog.DisplayLogMessageAction" class="org.igu.plugins.consolelog.DisplayLogMessageAction"
+            text="Display log message"
+            description="Display log message">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt l"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="alt l"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="alt l"/>
+    </action>
+    <action id="org.igu.plugins.consolelog.DeleteAllLogMessagesAction" class="org.igu.plugins.consolelog.DeleteAllLogMessagesAction"
+            text="Delete all log messages"
+            description="Delete all log messages">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt 7"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="alt 7"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="alt 7"/>
+    </action>
+    <action id="org.igu.plugins.consolelog.CommentAllLogMessagesAction" class="org.igu.plugins.consolelog.CommentAllLogMessagesAction"
+            text="Comment all log messages"
+            description="Comment all log messages">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt 8"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="alt 8"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="alt 8"/>
+    </action>
+    <action id="org.igu.plugins.consolelog.UnCommentAllLogMessagesAction" class="org.igu.plugins.consolelog.UnCommentAllLogMessagesAction"
+            text="Uncomment all log messages"
+            description="Uncomment all log messages">
+      <keyboard-shortcut keymap="$default" first-keystroke="alt 9"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="alt 9"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="alt 9"/>
+    </action>
+  </actions>
+
+</idea-plugin>
