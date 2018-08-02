@@ -24,17 +24,6 @@ class UnCommentAllLogMessagesAction : CommonAction() {
             return
         }
 
-        var selectedText = getSelectedText(caret)
-
-        if (selectedText == null) {
-            selectedText = when (data) {
-                is JSVariable -> data.name
-                else -> {
-                    null
-                }
-            }
-        }
-
         val document = editor.document
 
         runCommand(project, Runnable {
