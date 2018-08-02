@@ -1,21 +1,11 @@
 package org.igu.plugins.consolelog
 
-import com.intellij.diff.comparison.expandWhitespacesBackward
-import com.intellij.lang.javascript.psi.JSExpressionStatement
-import com.intellij.lang.javascript.psi.JSVariable
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.LangDataKeys
 import com.intellij.openapi.actionSystem.PlatformDataKeys
-import com.intellij.openapi.editor.Document
-import com.intellij.openapi.editor.Editor
-import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiDocumentManager
-import com.intellij.psi.PsiFile
-import com.intellij.psi.codeStyle.CodeStyleManager
 import com.intellij.util.ui.UIUtil
-import com.intellij.util.DocumentUtil.getLineEndOffset
-import com.intellij.util.DocumentUtil.getLineStartOffset
 
 
 /**

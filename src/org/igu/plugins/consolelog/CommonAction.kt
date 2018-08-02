@@ -1,9 +1,7 @@
 package org.igu.plugins.consolelog
 
 import com.intellij.codeInsight.hint.HintManager
-import com.intellij.lang.javascript.psi.JSCallExpression
 import com.intellij.lang.javascript.psi.JSExpressionStatement
-import com.intellij.lang.javascript.psi.JSParameterList
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.command.CommandProcessor
